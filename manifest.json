@@ -1,0 +1,9 @@
+{
+	"id": "xiangqi-diag",
+	"name": "Xiangqi FEN diagrams",
+	"version": "0.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "Display xiangqi diagrams from FEN in your notes.",
+	"author": "Marken Foo",
+	"isDesktopOnly": false
+}
