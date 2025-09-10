@@ -1,0 +1,35 @@
+.xiangqi_diag {
+  background-image: "SVG-REPLACE ./assets/boards/xiangqiPlain.svg";
+  height: 400px;
+  position: relative;
+  width: 360px;
+}
+
+.text_piece_container {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+}
+
+.text_piece {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  font-size: larger;
+  justify-content: center;
+  height: 85%;
+  width: 85%;
+}
+
+.red {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+  color: #ffffff;
+}
