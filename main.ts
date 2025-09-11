@@ -1,7 +1,11 @@
 import { FenParser } from "fenParser";
-import { type MarkdownPostProcessorContext, Plugin } from "obsidian";
+import { type MarkdownPostProcessorContext, Plugin, parseYaml } from "obsidian";
 import { hanziFromPiece } from "piece";
 import type { Piece, Square } from "types";
+
+type XiangqiDiagArgs = {
+	fen: string;
+};
 
 export default class XiangqiDiagPlugin extends Plugin {
 	async onload() {
@@ -14,7 +18,8 @@ function xiangqiDiagHandler(
 	el: HTMLElement,
 	_ctx: MarkdownPostProcessorContext,
 ): void {
-	const fenParser = new FenParser(source.trim());
+	const args: XiangqiDiagArgs = parseYaml(source);
+	const fenParser = new FenParser(args.fen.trim());
 	fenParser.parseFen();
 
 	if (fenParser.hasErrors()) {
