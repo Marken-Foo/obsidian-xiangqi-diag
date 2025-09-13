@@ -34,7 +34,8 @@ function xiangqiDiagHandler(
 	addTurnIndicator(board, fenParser.sideToMove);
 
 	for (const [sq, piece] of fenParser.piecePositions.entries()) {
-		putPieceOnBoard(board, sq, piece);
+		const square = flip ? reflectSquareAboutCenter(sq) : sq;
+		putPieceOnBoard(board, square, piece);
 	}
 }
 
@@ -82,4 +83,8 @@ function putPieceOnBoard(
 			cls: ["text_piece", piece.side === "red" ? "red" : "black"],
 			text: hanziFromPiece(piece),
 		});
+}
+
+function reflectSquareAboutCenter(sq: Square): Square {
+	return { col: 10 - sq.col, row: 11 - sq.row };
 }
