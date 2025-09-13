@@ -1,10 +1,11 @@
 import { FenParser } from "fenParser";
 import { type MarkdownPostProcessorContext, Plugin, parseYaml } from "obsidian";
 import { hanziFromPiece } from "piece";
-import type { Piece, Square } from "types";
+import type { Piece, Side, Square } from "types";
 
 type XiangqiDiagArgs = {
 	fen: string;
+	flip?: boolean;
 };
 
 export default class XiangqiDiagPlugin extends Plugin {
@@ -19,7 +20,8 @@ function xiangqiDiagHandler(
 	_ctx: MarkdownPostProcessorContext,
 ): void {
 	const args: XiangqiDiagArgs = parseYaml(source);
-	const fenParser = new FenParser(args.fen.trim());
+	const { fen, flip = false } = args;
+	const fenParser = new FenParser(fen.trim());
 	fenParser.parseFen();
 
 	if (fenParser.hasErrors()) {
@@ -28,10 +30,40 @@ function xiangqiDiagHandler(
 	}
 
 	const board = el.createDiv({ cls: "xiangqi_diag" });
+	addSideIndicator(board, flip);
+	addTurnIndicator(board, fenParser.sideToMove);
 
 	for (const [sq, piece] of fenParser.piecePositions.entries()) {
 		putPieceOnBoard(board, sq, piece);
 	}
+}
+
+function addSideIndicator(parent: HTMLDivElement, isFlipped: boolean): void {
+	const sideIndicator = parent.createDiv({
+		cls: ["square_container", "side_indicator"],
+	});
+	const topColor = isFlipped ? "red_triangle" : "black_triangle";
+	const bottomColor = isFlipped ? "black_triangle" : "red_triangle";
+	sideIndicator.createDiv({ cls: ["top_triangle", topColor] });
+	sideIndicator.createDiv({ cls: ["bottom_triangle", bottomColor] });
+}
+
+function addTurnIndicator(parent: HTMLDivElement, side: Side | null): void {
+	let color: string = "";
+	switch (side) {
+		case "red":
+			color = "red";
+			break;
+		case "black":
+			color = "black";
+			break;
+		case null:
+			break;
+	}
+	const turn_container = parent.createDiv({
+		cls: ["square_container", "turn_container"],
+	});
+	turn_container.createDiv({ cls: ["turn_indicator", color] });
 }
 
 function putPieceOnBoard(
@@ -43,7 +75,7 @@ function putPieceOnBoard(
 	const yTranslate = 100 * (10 - sq.row);
 	board
 		.createDiv({
-			cls: ["text_piece_container"],
+			cls: ["square_container"],
 			attr: { style: `transform: translate(${xTranslate}%, ${yTranslate}%)` },
 		})
 		.createDiv({

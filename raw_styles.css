@@ -1,11 +1,13 @@
 .xiangqi_diag {
+  background-color: #d3b15c;
   background-image: "SVG-REPLACE ./assets/boards/xiangqiPlain.svg";
+  background-repeat: no-repeat;
   height: 400px;
   position: relative;
-  width: 360px;
+  width: 400px;
 }
 
-.text_piece_container {
+.square_container {
   align-items: center;
   display: flex;
   height: 40px;
@@ -32,4 +34,51 @@
 .black {
   background-color: #000000;
   color: #ffffff;
+}
+
+.side_indicator {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(900%, 450%);
+  transform-origin: center;
+}
+
+.bottom_triangle {
+  border-bottom: 8px solid;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.top_triangle {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid;
+  height: 0;
+  width: 0;
+}
+
+.red_triangle {
+  border-bottom-color: red;
+  border-top-color: red;
+}
+
+.black_triangle {
+  border-bottom-color: black;
+  border-top-color: black;
+}
+
+.turn_container {
+  transform: translate(900%, 510%);
+  transform-origin: center;
+}
+
+.turn_indicator {
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
 }

@@ -1,11 +1,13 @@
 .xiangqi_diag {
+  background-color: #d3b15c;
   background-image: url("data:image/svg+xml;charset=utf8,%3C%3Fxml version=%271.0%27 encoding=%27UTF-8%27%3F%3E%0A%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 900 1000' stroke='%23000000' stroke-width='2'%3E%3Crect width='900' height='1000' style='fill:%23FDD775;stroke:none' /%3E%3Cline x1='50' y1='50' x2='850' y2='50' /%3E%3Cline x1='50' y1='150' x2='850' y2='150' /%3E%3Cline x1='50' y1='250' x2='850' y2='250' /%3E%3Cline x1='50' y1='350' x2='850' y2='350' /%3E%3Cline x1='50' y1='450' x2='850' y2='450' /%3E%3Cline x1='50' y1='550' x2='850' y2='550' /%3E%3Cline x1='50' y1='650' x2='850' y2='650' /%3E%3Cline x1='50' y1='750' x2='850' y2='750' /%3E%3Cline x1='50' y1='850' x2='850' y2='850' /%3E%3Cline x1='50' y1='950' x2='850' y2='950' /%3E%3Cline x1='50' y1='50' x2='50' y2='950' /%3E%3Cline x1='150' y1='50' x2='150' y2='450' /%3E%3Cline x1='150' y1='550' x2='150' y2='950' /%3E%3Cline x1='250' y1='50' x2='250' y2='450' /%3E%3Cline x1='250' y1='550' x2='250' y2='950' /%3E%3Cline x1='350' y1='50' x2='350' y2='450' /%3E%3Cline x1='350' y1='550' x2='350' y2='950' /%3E%3Cline x1='450' y1='50' x2='450' y2='450' /%3E%3Cline x1='450' y1='550' x2='450' y2='950' /%3E%3Cline x1='550' y1='50' x2='550' y2='450' /%3E%3Cline x1='550' y1='550' x2='550' y2='950' /%3E%3Cline x1='650' y1='50' x2='650' y2='450' /%3E%3Cline x1='650' y1='550' x2='650' y2='950' /%3E%3Cline x1='750' y1='50' x2='750' y2='450' /%3E%3Cline x1='750' y1='550' x2='750' y2='950' /%3E%3Cline x1='850' y1='50' x2='850' y2='950' /%3E%3Cline x1='350' y1='50' x2='550' y2='250' /%3E%3Cline x1='350' y1='250' x2='550' y2='50' /%3E%3Cline x1='350' y1='750' x2='550' y2='950' /%3E%3Cline x1='350' y1='950' x2='550' y2='750' /%3E%3Cline x1='123' y1='243' x2='143' y2='243' /%3E%3Cline x1='143' y1='223' x2='143' y2='243' /%3E%3Cline x1='123' y1='257' x2='143' y2='257' /%3E%3Cline x1='143' y1='257' x2='143' y2='277' /%3E%3Cline x1='157' y1='243' x2='177' y2='243' /%3E%3Cline x1='157' y1='223' x2='157' y2='243' /%3E%3Cline x1='157' y1='257' x2='177' y2='257' /%3E%3Cline x1='157' y1='257' x2='157' y2='277' /%3E%3Cline x1='723' y1='243' x2='743' y2='243' /%3E%3Cline x1='743' y1='223' x2='743' y2='243' /%3E%3Cline x1='723' y1='257' x2='743' y2='257' /%3E%3Cline x1='743' y1='257' x2='743' y2='277' /%3E%3Cline x1='757' y1='243' x2='777' y2='243' /%3E%3Cline x1='757' y1='223' x2='757' y2='243' /%3E%3Cline x1='757' y1='257' x2='777' y2='257' /%3E%3Cline x1='757' y1='257' x2='757' y2='277' /%3E%3Cline x1='57' y1='343' x2='77' y2='343' /%3E%3Cline x1='57' y1='323' x2='57' y2='343' /%3E%3Cline x1='57' y1='357' x2='77' y2='357' /%3E%3Cline x1='57' y1='357' x2='57' y2='377' /%3E%3Cline x1='223' y1='343' x2='243' y2='343' /%3E%3Cline x1='243' y1='323' x2='243' y2='343' /%3E%3Cline x1='223' y1='357' x2='243' y2='357' /%3E%3Cline x1='243' y1='357' x2='243' y2='377' /%3E%3Cline x1='257' y1='343' x2='277' y2='343' /%3E%3Cline x1='257' y1='323' x2='257' y2='343' /%3E%3Cline x1='257' y1='357' x2='277' y2='357' /%3E%3Cline x1='257' y1='357' x2='257' y2='377' /%3E%3Cline x1='423' y1='343' x2='443' y2='343' /%3E%3Cline x1='443' y1='323' x2='443' y2='343' /%3E%3Cline x1='423' y1='357' x2='443' y2='357' /%3E%3Cline x1='443' y1='357' x2='443' y2='377' /%3E%3Cline x1='457' y1='343' x2='477' y2='343' /%3E%3Cline x1='457' y1='323' x2='457' y2='343' /%3E%3Cline x1='457' y1='357' x2='477' y2='357' /%3E%3Cline x1='457' y1='357' x2='457' y2='377' /%3E%3Cline x1='623' y1='343' x2='643' y2='343' /%3E%3Cline x1='643' y1='323' x2='643' y2='343' /%3E%3Cline x1='623' y1='357' x2='643' y2='357' /%3E%3Cline x1='643' y1='357' x2='643' y2='377' /%3E%3Cline x1='657' y1='343' x2='677' y2='343' /%3E%3Cline x1='657' y1='323' x2='657' y2='343' /%3E%3Cline x1='657' y1='357' x2='677' y2='357' /%3E%3Cline x1='657' y1='357' x2='657' y2='377' /%3E%3Cline x1='823' y1='343' x2='843' y2='343' /%3E%3Cline x1='843' y1='323' x2='843' y2='343' /%3E%3Cline x1='823' y1='357' x2='843' y2='357' /%3E%3Cline x1='843' y1='357' x2='843' y2='377' /%3E%3Cline x1='123' y1='743' x2='143' y2='743' /%3E%3Cline x1='143' y1='723' x2='143' y2='743' /%3E%3Cline x1='123' y1='757' x2='143' y2='757' /%3E%3Cline x1='143' y1='757' x2='143' y2='777' /%3E%3Cline x1='157' y1='743' x2='177' y2='743' /%3E%3Cline x1='157' y1='723' x2='157' y2='743' /%3E%3Cline x1='157' y1='757' x2='177' y2='757' /%3E%3Cline x1='157' y1='757' x2='157' y2='777' /%3E%3Cline x1='723' y1='743' x2='743' y2='743' /%3E%3Cline x1='743' y1='723' x2='743' y2='743' /%3E%3Cline x1='723' y1='757' x2='743' y2='757' /%3E%3Cline x1='743' y1='757' x2='743' y2='777' /%3E%3Cline x1='757' y1='743' x2='777' y2='743' /%3E%3Cline x1='757' y1='723' x2='757' y2='743' /%3E%3Cline x1='757' y1='757' x2='777' y2='757' /%3E%3Cline x1='757' y1='757' x2='757' y2='777' /%3E%3Cline x1='57' y1='643' x2='77' y2='643' /%3E%3Cline x1='57' y1='623' x2='57' y2='643' /%3E%3Cline x1='57' y1='657' x2='77' y2='657' /%3E%3Cline x1='57' y1='657' x2='57' y2='677' /%3E%3Cline x1='223' y1='643' x2='243' y2='643' /%3E%3Cline x1='243' y1='623' x2='243' y2='643' /%3E%3Cline x1='223' y1='657' x2='243' y2='657' /%3E%3Cline x1='243' y1='657' x2='243' y2='677' /%3E%3Cline x1='257' y1='643' x2='277' y2='643' /%3E%3Cline x1='257' y1='623' x2='257' y2='643' /%3E%3Cline x1='257' y1='657' x2='277' y2='657' /%3E%3Cline x1='257' y1='657' x2='257' y2='677' /%3E%3Cline x1='423' y1='643' x2='443' y2='643' /%3E%3Cline x1='443' y1='623' x2='443' y2='643' /%3E%3Cline x1='423' y1='657' x2='443' y2='657' /%3E%3Cline x1='443' y1='657' x2='443' y2='677' /%3E%3Cline x1='457' y1='643' x2='477' y2='643' /%3E%3Cline x1='457' y1='623' x2='457' y2='643' /%3E%3Cline x1='457' y1='657' x2='477' y2='657' /%3E%3Cline x1='457' y1='657' x2='457' y2='677' /%3E%3Cline x1='623' y1='643' x2='643' y2='643' /%3E%3Cline x1='643' y1='623' x2='643' y2='643' /%3E%3Cline x1='623' y1='657' x2='643' y2='657' /%3E%3Cline x1='643' y1='657' x2='643' y2='677' /%3E%3Cline x1='657' y1='643' x2='677' y2='643' /%3E%3Cline x1='657' y1='623' x2='657' y2='643' /%3E%3Cline x1='657' y1='657' x2='677' y2='657' /%3E%3Cline x1='657' y1='657' x2='657' y2='677' /%3E%3Cline x1='823' y1='643' x2='843' y2='643' /%3E%3Cline x1='843' y1='623' x2='843' y2='643' /%3E%3Cline x1='823' y1='657' x2='843' y2='657' /%3E%3Cline x1='843' y1='657' x2='843' y2='677' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
   height: 400px;
   position: relative;
-  width: 360px;
+  width: 400px;
 }
 
-.text_piece_container {
+.square_container {
   align-items: center;
   display: flex;
   height: 40px;
@@ -32,4 +34,51 @@
 .black {
   background-color: #000000;
   color: #ffffff;
+}
+
+.side_indicator {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(900%, 450%);
+  transform-origin: center;
+}
+
+.bottom_triangle {
+  border-bottom: 8px solid;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.top_triangle {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid;
+  height: 0;
+  width: 0;
+}
+
+.red_triangle {
+  border-bottom-color: red;
+  border-top-color: red;
+}
+
+.black_triangle {
+  border-bottom-color: black;
+  border-top-color: black;
+}
+
+.turn_container {
+  transform: translate(900%, 510%);
+  transform-origin: center;
+}
+
+.turn_indicator {
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
 }
