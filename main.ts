@@ -21,6 +21,11 @@ function xiangqiDiagHandler(
 ): void {
 	const args: XiangqiDiagArgs = parseYaml(source);
 	const { fen, flip = false } = args;
+	if (fen === undefined) {
+		el.createDiv({ text: "Error: must provide FEN in YAML `fen:` field" });
+		return;
+	}
+
 	const fenParser = new FenParser(fen.trim());
 	fenParser.parseFen();
 
