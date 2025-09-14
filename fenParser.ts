@@ -60,13 +60,16 @@ export class FenParser {
 		this.skipWhitespace();
 		this.parseSideToMove();
 		this.skipWhitespace();
-		this.parseHyphen();
+		this.skipHyphen();
 		this.skipWhitespace();
-		this.parseHyphen();
+		this.skipHyphen();
 		this.skipWhitespace();
 		this.parsePlySinceLastCapture();
 		this.skipWhitespace();
 		this.parseMoveNum();
+		if (this.input.peek() !== null) {
+			this.errors.push(`Expected EOF, got ${this.input.peek()}`);
+		}
 	}
 
 	parsePosition() {
@@ -114,13 +117,11 @@ export class FenParser {
 		this.input.advance();
 	}
 
-	parseHyphen() {
+	skipHyphen() {
 		const c = this.input.peek();
-		if (c !== "-") {
-			this.errors.push(`Expected '-', found '${c}'`);
-			return;
+		if (c === "-") {
+			this.input.advance();
 		}
-		this.input.advance();
 	}
 
 	skipWhitespace() {
@@ -131,21 +132,20 @@ export class FenParser {
 		}
 	}
 
-	parseSideToMove() {
+	parseSideToMove(): Side | null {
 		const c = this.input.peek();
 		switch (c) {
 			case "r":
 			case "w":
 				this.sideToMove = "red";
 				this.input.advance();
-				return;
+				return "red";
 			case "b":
 				this.sideToMove = "black";
 				this.input.advance();
-				return;
+				return "black";
 			default:
-				this.errors.push(`Expected 'r' or 'w' or 'b', found '${c}'`);
-				return;
+				return null;
 		}
 	}
 
