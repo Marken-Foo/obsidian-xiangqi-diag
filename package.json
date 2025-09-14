@@ -5,7 +5,7 @@
 	"main": "main.ts",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+		"build": "uv run put_svg_in_css.py && tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
 	},
 	"author": "Marken Foo",
 	"devDependencies": {
