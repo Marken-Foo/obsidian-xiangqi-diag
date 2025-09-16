@@ -1,7 +1,6 @@
 import xml.etree.ElementTree as ET
 
 OUT_FILE = "xiangqiPlain.svg"
-BOARD_COLOUR = "#FDD775"
 LINE_COLOUR = "#000000"
 
 NUM_XQ_ROWS = 10
@@ -96,16 +95,7 @@ root = ET.Element(
         "viewBox": f"0 0 {WIDTH} {HEIGHT}",
         "stroke": LINE_COLOUR,
         "stroke-width": str(LINE_WIDTH),
-    },
-)
-
-background = ET.SubElement(
-    root,
-    "rect",
-    {
-        "width": str(WIDTH),
-        "height": str(HEIGHT),
-        "style": f"fill:{BOARD_COLOUR};stroke:none",
+        "stroke-linecap": "square"
     },
 )
 

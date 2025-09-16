@@ -1,10 +1,21 @@
+/* Ensure the variable is set: --xiangqi-diag-board-color */
 .xiangqi_diag {
+  --red-piece-color: #ff0000;
+  --red-piece-font-color: #ffffff;
+  --black-piece-color: #000000;
+  --black-piece-font-color: #ffffff;
   background-color: #d3b15c;
-  background-image: "SVG-REPLACE ./assets/boards/xiangqiPlain.svg";
-  background-repeat: no-repeat;
   height: 400px;
   position: relative;
   width: 400px;
+}
+
+.xiangqi_board {
+  background-color: var(--xiangqi-diag-board-color);
+  background-image: "SVG-REPLACE ./assets/boards/xiangqiPlain.svg";
+  height: 400px;
+  position: absolute;
+  width: 360px;
 }
 
 .square_container {
@@ -27,13 +38,13 @@
 }
 
 .red {
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: var(--red-piece-color);
+  color: var(--red-piece-font-color);
 }
 
 .black {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--black-piece-color);
+  color: var(--black-piece-font-color);
 }
 
 .side_indicator {
@@ -62,13 +73,13 @@
 }
 
 .red_triangle {
-  border-bottom-color: red;
-  border-top-color: red;
+  border-bottom-color: var(--red-piece-color);
+  border-top-color: var(--red-piece-color);
 }
 
 .black_triangle {
-  border-bottom-color: black;
-  border-top-color: black;
+  border-bottom-color: var(--black-piece-color);
+  border-top-color: var(--black-piece-color);
 }
 
 .turn_container {
